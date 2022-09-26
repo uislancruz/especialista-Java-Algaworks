@@ -13,6 +13,8 @@ public class ControlePesoAeronave {
 
         int pesoTotalPassageiros = 0;
 
+        //trocando para while
+
         for (int passageiroAtual = 1; passageiroAtual <= totalPassageiros; passageiroAtual++) {
             System.out.printf("Peso do passageiro #%d: ", passageiroAtual);
             int pesoPassageiro = entrada.nextInt();
