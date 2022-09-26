@@ -12,14 +12,14 @@ public class ControlePesoAeronave {
         int totalPassageiros = entrada.nextInt();
 
         int pesoTotalPassageiros = 0;
+        int passageiroAtual = 1;
 
-        //trocando para while
-
-        for (int passageiroAtual = 1; passageiroAtual <= totalPassageiros; passageiroAtual++) {
+        while (passageiroAtual <= totalPassageiros) {
             System.out.printf("Peso do passageiro #%d: ", passageiroAtual);
             int pesoPassageiro = entrada.nextInt();
 
             pesoTotalPassageiros += pesoPassageiro;
+            passageiroAtual++;
         }
 
         System.out.printf("Peso máximo da aeronave: %d kg%n", pesoMaximo);
