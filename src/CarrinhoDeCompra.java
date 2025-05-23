@@ -11,15 +11,27 @@ public class CarrinhoDeCompra {
         boolean pagamentoAutorizado = GatewayPagamento.autorizarPagamento(numeroCarta, valorTotal);
 
         if (pagamentoAutorizado){
-            System.out.println("Recibo de Pagamento");
-            System.out.printf("Valor total: R$%2.f%n", valorTotal);
+            imprimirRecibo(valorTotal);
         }
     }
 
+    private static void imprimirRecibo(double valorTotal) {
+        System.out.println("Recibo de Pagamento");
+        System.out.printf("Valor total: R$%2.f%n", valorTotal);
+    }
+
     double calcularValorTotal() {
-        double subtotal = produto.precoUnitario * quantidadeItens;
-        double taxaServico = subtotal * TAXA_SERVICO_PADRAO;
+        double subtotal = calcularSubtotal();
+        double taxaServico = calcularTaxaServico(subtotal);
         double valorTotal = subtotal + taxaServico;
         return valorTotal;
+    }
+
+    static double calcularTaxaServico(double subtotal) {
+        return subtotal * TAXA_SERVICO_PADRAO;
+    }
+
+    double calcularSubtotal() {
+        return produto.precoUnitario * quantidadeItens;
     }
 }
