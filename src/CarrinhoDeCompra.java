@@ -15,6 +15,7 @@ public class CarrinhoDeCompra {
         }
     }
 
+
     private static void imprimirRecibo(double valorTotal) {
         System.out.println("Recibo de Pagamento");
         System.out.printf("Valor total: R$%2.f%n", valorTotal);
