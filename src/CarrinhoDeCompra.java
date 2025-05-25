@@ -5,6 +5,10 @@ public class CarrinhoDeCompra {
     int quantidadeItens;
     Produto produto;
 
+    void adicionarItem(String nomeProduto, double precoUnitario, int quantidade) {
+
+    }
+
     void realizarCompra(String numeroCarta){
         double valorTotal = calcularValorTotal();
 
