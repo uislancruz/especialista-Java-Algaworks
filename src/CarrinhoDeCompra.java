@@ -9,6 +9,10 @@ public class CarrinhoDeCompra {
 
     }
 
+    void adicionarItem(Produto produto, int quantidade){
+
+    }
+
     void realizarCompra(String numeroCarta){
         double valorTotal = calcularValorTotal();
 
