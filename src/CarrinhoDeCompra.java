@@ -5,6 +5,10 @@ public class CarrinhoDeCompra {
     int quantidadeItens;
     Produto produto;
 
+    void adicionarItem(String nomeProduto, double precoUnitario, int quantidade) {
+
+    }
+
     void realizarCompra(String numeroCarta){
         double valorTotal = calcularValorTotal();
 
@@ -14,6 +18,7 @@ public class CarrinhoDeCompra {
             imprimirRecibo(valorTotal);
         }
     }
+
 
     private static void imprimirRecibo(double valorTotal) {
         System.out.println("Recibo de Pagamento");
